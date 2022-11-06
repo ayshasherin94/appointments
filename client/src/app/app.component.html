@@ -1,0 +1,25 @@
+<div class="flex-container">
+  <div class="flex-child">
+    <div *ngFor="let docOi of doc">
+      <h2 (click)="docAppointments(docOi.id)">
+        {{ docOi.firstName }} {{ docOi.lastName }}
+      </h2>
+    </div>
+  </div>
+  <table class="zui-table">
+    <thead>
+      <tr>
+        <th>Patient</th>
+        <th>Time</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appt of appointment">
+        <td>{{ appt.Patient }}</td>
+        <td>{{ appt.time }}</td>
+        <td>{{ appt.type }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
